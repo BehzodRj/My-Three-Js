@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Three Js</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .stop__orbit {
+          position: absolute;
+          top: 30px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
+        
+        .cars__content {
+          position: absolute;
+          bottom: 30px;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .cars__content button {
+          margin: 0px 5px;
+        }
+
+
+        button {
+          width: 120px;
+          padding: 10px;
+          margin: 0 20px;
+          font-family: 'Arial', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          border-radius: 12px;
+          border: none;
+          cursor: pointer;
+        }
+
+        .active {
+          display: none;
+        }
+    </style>
+</head>
+
+<body>
+  <div class="stop__orbit">
+    <button id="stopOrbit">Pause</button>
+    <button id="startOrbit" class="active">Start</button>
+  </div>
+
+  <div class="cars__content">
+    <button id="coupe">Coupe</button>
+    <button id="porsche">Porsche</button>
+  </div>
+
+
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three/build/three.module.js",
+      "three/examples/": "https://unpkg.com/three/examples/"
+    }
+  }
+</script>
+
+    <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>
